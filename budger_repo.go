@@ -1,5 +1,13 @@
 package YileTDD
 
-type BudgetRepo struct {
+type IBudgetRepo interface {
+	GetAll() []Budget
+}
 
+type BudgetRepo struct {}
+
+func (br BudgetRepo) GetAll() []Budget {
+	return []Budget{
+
+	}
 }
