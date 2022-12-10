@@ -1,10 +1,5 @@
 package YileTDD
 
-type IBudget interface {
-	YearMonth() string
-	Amount() int
-}
-
 type Budget struct {
 	yearMonth string
 	amount int
