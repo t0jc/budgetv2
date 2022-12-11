@@ -6,7 +6,7 @@ import (
 )
 
 type BudgetService struct {
-	br IBudgetRepo
+	repo IBudgetRepo
 }
 
 func (bs BudgetService) Query(start, end time.Time) float64 {
@@ -14,7 +14,7 @@ func (bs BudgetService) Query(start, end time.Time) float64 {
 		return float64(0)
 	}
 
-	bList := bs.br.GetAll()
+	bList := bs.repo.GetAll()
 
 	dailyBudgetInMonthList := make(map[string]int, 0)
 	for _, b := range bList {

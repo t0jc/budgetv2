@@ -116,7 +116,7 @@ func TestBudgetService_Query(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			bs := BudgetService{
-				br: tt.fields.br,
+				repo: tt.fields.br,
 			}
 			if got := bs.Query(tt.args.start, tt.args.end); got != tt.want {
 				t.Errorf("Query() = %v, want %v", got, tt.want)
