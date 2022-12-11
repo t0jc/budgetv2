@@ -1,0 +1,12 @@
+{
+    "go.testEnvFile": "${workspaceFolder}/.vscode/test.env",
+    "go.testFlags": [
+        "-v",
+        "-count=1",
+        "-parallel=10000"
+    ],
+    "go.testTimeout": "600s",
+    "go.delveConfig": {
+        "debugAdapter": "legacy"
+    }
+}
